@@ -45,7 +45,14 @@
                                          *ngIf='showImage'
                                          >
                                     </td>
-                                    <td>{{ product.productName }} </td>
+                                    <td>
+                                            <!-- <a [routerLink]="['/welcome']"> Home </a> -->
+                                        <!-- <a [routerLink]="['/products', product.productId]" > -->
+                                        <!-- <a>      -->
+                                                <a [routerLink]="['/products', product.productId]"> {{ product.productName }} </a>
+                                                <!-- <a [routerLink]="['/welcome']"> {{ product.productName }} </a> -->
+                                        <!-- <a> -->
+                                    </td>
                                     <td>{{ product.productCode | convertToSpaces:'-' | lowercase }} </td>
                                     <td>{{ product.releaseDate }} </td>
                                     <td>{{ product.price | currency : 'inr':true: '1.0-0' }} </td>
